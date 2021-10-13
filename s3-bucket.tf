@@ -1,11 +1,6 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
-
-  bucket = "davidball-s3-bucket"
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
+  module "s3-bucket" {
+  source  = "app.terraform.io/hashicat-dball-training/s3-bucket/aws"
+  version = "2.2.0"
+  # insert required variables here
+    bucket_prefix = "davidball"
 }
